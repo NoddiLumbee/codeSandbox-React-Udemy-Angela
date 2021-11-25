@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App.jsx";
 
 const date = new Date();
 const currentTime = date.getHours();
@@ -21,9 +22,12 @@ if (currentTime < 12) {
 }
 
 ReactDOM.render(
-  <h1 className="heading" style={customStyle}>
-    {" "}
-    {greeting}{" "}
-  </h1>,
+  <div>
+    <h1 className="heading" style={customStyle}>
+      {" "}
+      {greeting}
+    </h1>
+    <App />
+  </div>,
   document.getElementById("root")
 );
